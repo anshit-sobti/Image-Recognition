@@ -5,8 +5,7 @@ import MySQLdb
 import time
 import json
 
-#        replace mysql.server with "localhost" if you are running via your own server!
-#                        server       MySQL username	MySQL pass  Database name.
+
 conn = MySQLdb.connect("mysql.server", "beginneraccount", "cookies", "beginneraccount$tutorial")
 
 c = conn.cursor()
