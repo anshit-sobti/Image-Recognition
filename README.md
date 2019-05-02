@@ -2,7 +2,7 @@
     Image-Recognition using AWS Rekognition
 
 # University Name: 
-    [San Jose State University](http://www.sjsu.edu/  "San Jose State University")
+    [San Jose State University](http://www.sjsu.edu/)
 
 # Course: 
     [CMPE 266 Big Data Engineering and Analytics](http://info.sjsu.edu/web-dbgen/catalog/courses/CMPE266.htmlhttp:// "CMPE 266 Big Data Engineering and Analytics")
