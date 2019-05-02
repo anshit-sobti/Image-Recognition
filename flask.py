@@ -75,9 +75,6 @@ class LambdaResponse(object):
 class FlaskLambda(Flask):
     def __call__(self, event, context):
         if 'httpMethod' not in event:
-            # In this "context" `event` is `environ` and
-            # `context` is `start_response`, meaning the request didn't
-            # occur via API Gateway and Lambda
             return super(FlaskLambda, self).__call__(event, context)
 
         response = LambdaResponse()

@@ -2,10 +2,18 @@ import boto3
 import json
 from datetime import datetime
 import time
+from ConfigParser import SafeConfigParser
+import os
 
-my_stream_name = 'python-stream'
+config = SafeConfigParser()
+config.read('twitter-rekognition.config')
 
-kinesis_client = boto3.client('kinesis', region_name='us-east-1')
+region = os.environ['AWS_DEFAULT_REGION'];
+print("region: " + region)
+
+my_stream_name = config.get('firehose', 'deliverystream_name')
+
+kinesis_client = boto3.client('kinesis', region_name=region)
 
 response = kinesis_client.describe_stream(StreamName=my_stream_name)
 
